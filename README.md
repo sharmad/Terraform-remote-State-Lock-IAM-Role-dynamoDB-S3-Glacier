@@ -32,7 +32,7 @@ module "tf_remote_state_lock" {
 }
 ```
 
-#### Example with hardcoded values:
+### Example (hardcoded values):
 
 ```terraform
 module "tf_remote_state_lock" {
@@ -43,7 +43,7 @@ module "tf_remote_state_lock" {
 }
 ```
 
-#### Once, the module is setup, use the usual terraform commands:
+### Once, the module is setup, use the usual terraform commands:
 
 **terraform init**  
 
