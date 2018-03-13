@@ -1,4 +1,4 @@
-# Module to configure Terraform remote state, locking, archiving and IAM role access to state
+## Module to configure Terraform remote state, locking, archiving and IAM role access to state
 
 ## Features
 * Terraform remote State in S3
@@ -7,7 +7,7 @@
 * Access to the remote state to only specific IAM Role
 
 
-# Inputs
+## Inputs
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | region | region | string | `eu-west-1` | no |
@@ -15,7 +15,7 @@
 | bucket-suffix | Suffix for the bucket name: `terraform-state-{bucket-suffix}` | string | - | yes |
 | role | IAM role to access the terraform remote state | string | - | yes |
 
-# Usage
+## Usage
 
 To use this module in your project, add the following to your main .tf file:
 
@@ -32,7 +32,7 @@ module "tf_remote_state_lock" {
 }
 ```
 
-### Example with hardcoded values:
+#### Example with hardcoded values:
 
 ```terraform
 module "tf_remote_state_lock" {
@@ -45,6 +45,6 @@ module "tf_remote_state_lock" {
 
 #### Once, the module is setup, use the usual terraform commands:
 
- terraform init
- terraform plan
- terraform apply
+**terraform init**
+**terraform plan**
+**terraform apply**
