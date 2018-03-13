@@ -8,6 +8,11 @@ variable "env" {
   description = "Name of the environment. Example: prod"
 }
 
+variable "bucket-suffix" {
+  type = "string"
+  description = "Suffix to be used in the bucket name. For example, `terraform-state-{bucket-suffix}`"
+}
+
 # IAM role to access the terraform remote state
 variable "role" {}
 
