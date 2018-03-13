@@ -1,4 +1,4 @@
-# Module to configure Terraform remote State, locking, archiving via lifecycle policies and only grant specific IAM role access to the state
+# Module to configure Terraform remote state, locking, archiving and IAM role access to state
 
 ## Features
 * Terraform remote State in S3
@@ -12,7 +12,7 @@
 |------|-------------|:----:|:-----:|:-----:|
 | region | region | string | `eu-west-1` | no |
 | environment | dev, staging, prod, etc | string | - | yes |
-| bucket-suffix | Suffix to be used in the bucket name, like `terraform-state-{bucket-suffix}` | string | - | yes |
+| bucket-suffix | Suffix for the bucket name: `terraform-state-{bucket-suffix}` | string | - | yes |
 | role | IAM role to access the terraform remote state | string | - | yes |
 
 # Usage
@@ -42,3 +42,9 @@ module "tf_remote_state_lock" {
 	dynamodb_state_lock_table = "tf_state_lock"
 }
 ```
+
+#### Once, the module is setup, use the usual terraform commands:
+
+ terraform init
+ terraform plan
+ terraform apply
