@@ -18,5 +18,5 @@ variable "role" {}
 
 variable "dynamodb_state_lock_table" {
   type        = "string"
-  description = "DynamoDB table name for terraform lock."
+  description = "DynamoDB table name for terraform lock"
 }
